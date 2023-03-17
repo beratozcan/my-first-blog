@@ -6,6 +6,12 @@
     <header class="page-header">
         <div class="container">
             <h1><a href="/">Berat's Blog</a></h1>
+            {% if user.is_authenticated %}
+                <h1><a href="{% url 'post_new' %}" class="top-menu">
+                    {% include './icons/file-earmark-plus.svg' %}
+                </a>
+            {% endif %}
+        </h1>
         </div>
 
     </header>
